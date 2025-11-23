@@ -30,3 +30,24 @@ spec:
       port: 80
       targetPort: 3000
   type: ClusterIP
+
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: web-apps-ingress
+  namespace: default
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: www.dillaxadhi.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: next-app-service
+            port:
+              number: 80
