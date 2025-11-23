@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: next_app
+  name: next-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: next_app
+      app: next-app
   template:
     metadata:
       labels:
-        app: next_app
+        app: next-app
     spec:
       containers:
-        - name: next_app
+        - name: next-app
           image: dillax/next_app:9e7f9a552130763079448ab765c72dd5a1d39179
           ports:
             - containerPort: 3000
@@ -21,10 +21,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: next_app-service
+  name: next-app-service
 spec:
   selector:
-    app: next_app
+    app: next-app
   ports:
     - protocol: TCP
       port: 80
