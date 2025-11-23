@@ -5,6 +5,6 @@ metadata:
 spec:
   containers:
   - name: next_app
-    image: dillax/next_app:dillax/next_app:14b4b2940e5f4eecdfbd57d2958fd5eac9712a8e
+    image: dillax/next_app:f96a906f07222a952891becce2605233331a9d39
     ports:
     - containerPort: 3000
