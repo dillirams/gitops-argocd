@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: next_app
-          image: dillax/next_app:6a7e34831f2e443a5ab94f8b02514e0bc50b43a8
+          image: dillax/next_app:9e7f9a552130763079448ab765c72dd5a1d39179
           ports:
             - containerPort: 3000
 ---
