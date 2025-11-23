@@ -8,3 +8,16 @@ spec:
     image: dillax/next_app:dillax/next_app:14b4b2940e5f4eecdfbd57d2958fd5eac9712a8e
     ports:
     - containerPort: 3000
+
+---
+apiVersion: v1
+king: Service
+metadata:
+  name: next_app-service
+spec:
+  selector:
+   app: next_app
+  ports:
+   - protocol: TCP
+     targetPort: 3000
+  type: ClusterIP
