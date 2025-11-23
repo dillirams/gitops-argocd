@@ -11,13 +11,14 @@ spec:
 
 ---
 apiVersion: v1
-king: Service
+kind: Service
 metadata:
   name: next_app-service
 spec:
   selector:
-   app: next_app
+    app: next_app
   ports:
-   - protocol: TCP
-     targetPort: 3000
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
   type: ClusterIP
