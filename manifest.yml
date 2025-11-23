@@ -38,13 +38,15 @@ kind: Ingress
 metadata:
   name: web-apps-ingress
   namespace: default
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
-  - host: www.dillaxadhi.com
+  - host: app.dillaxadhi.com
     http:
       paths:
-      - path: /
+      - path: /profile
         pathType: Prefix
         backend:
           service:
